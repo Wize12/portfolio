@@ -1,0 +1,285 @@
+/* General Reset and Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #e5e5e5;
+    background-color: #1a1a1a;
+}
+
+/* Navbar Styling */
+.hero-header {
+    background: #2a2a2a;
+    padding: 20px 0;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    color: #007ced;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo i {
+    height: 45px;
+    width: 45px;
+    background-color: #007ced;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Toggle Button for Mobile View */
+.togglebtn {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    right: 3%;
+    z-index: 10; /* Ensures the toggle button is on top of the nav menu */
+}
+
+.togglebtn span {
+    background: #e5e5e5;
+    width: 25px;
+    height: 3px;
+    margin: 4px 0;
+    transition: transform 0.3s, opacity 0.3s; /* Smooth transition for transformation and opacity */
+}
+/* Navigation Links */
+.navlinks {
+    display: flex;
+    gap: 30px;
+    padding: 10px;
+    align-items: center;
+  
+}
+
+.navlinks li {
+    list-style: none;
+}
+
+.navlinks a {
+    color: #e5e5e5;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navlinks a:hover {
+    background-color: #007ced;
+    color: #fff;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .togglebtn {
+        display: flex;
+    }
+    
+    .navlinks {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        flex-direction: column;
+        width: 150px;
+        background: #2a2a2a;
+        border-radius: 10px;
+        padding: 20px;
+        display: none;
+        opacity: 0;
+        transition: all 0.3s;
+    }
+
+    .navlinks.open {
+        display: flex;
+        opacity: 1;
+    }
+
+    .navlinks li {
+        margin: 10px 0;
+    }
+
+    /* Toggle Button "X" Styling */
+.togglebtn.click span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.togglebtn.click span:nth-child(2) {
+    opacity: 0;
+}
+
+.togglebtn.click span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+}
+/* Additional Styling for Content */
+h2 {
+    color: #007ced;
+}
+
+a {
+    color: #007ced;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #005bb5;
+}
+
+/* Modern Contact Section */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 40px;
+    background: #1a1a1a;
+}
+
+.contact-card {
+    background: #2a2a2a;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    color: #e5e5e5;
+}
+
+.contact-card h2 {
+    font-size: 2rem;
+    color: #007ced;
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    color: #c5c5c5;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.info-item {
+    background: #333;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: #007ced;
+    margin-bottom: 10px;
+}
+
+.info-item h3 {
+    font-size: 1.2rem;
+    color: #e5e5e5;
+    margin-bottom: 5px;
+}
+
+.info-item p {
+    font-size: 1rem;
+    color: #c5c5c5;
+}
+
+.info-item:hover {
+    transform: translateY(-5px);
+    background-color: #3b3b3b;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 10px;
+    color: #e5e5e5;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    background: #333;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: #007ced;
+    transform: scale(1.1);
+}
+/* Style for the popup container (hidden by default) */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Popup content box */
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+    position: relative;
+}
+
+/* Close button style */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: red;
+}
+
+/* Image styling */
+.popup-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}

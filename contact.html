@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="contact.css">
+    <title>Contact</title>
+</head>
+<body>
+    <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <!-- Logo Section -->
+                <div class="logo">
+                    <i class="fa-solid fa-c"></i>
+                    <div class="logo-text">Cris Labicane</div>
+                </div>
+
+                <!-- Toggle Button for Mobile -->
+                <div class="togglebtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <!-- Navigation Links -->
+                <nav>
+                    <ul class="navlinks">
+                        <li><a href="Home.html">Home</a></li>
+                        <li><a href="project.html">Project</a></li>
+                        <li><a href="resume.html">Resume</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+    </div>
+
+    <!-- Modern Contact Section -->
+    <section class="contact-section">
+        <div class="contact-card">
+            <h2>Get in Touch</h2>
+            <p>Feel free to reach out to me via the following contact methods.</p>
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>labicanecris29@example.com</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <h3>Phone</h3>
+                    <p>+639267076750</p>
+                </div>
+                <div class="info-item" onclick="showPopup()">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Location</h3>
+                    <p>Guiuan Eastern Samar</p>
+                </div>
+                
+                <!-- Popup Container -->
+                <div id="popup" class="popup">
+                    <div class="popup-content">
+                        <span class="close" onclick="closePopup()">&times;</span>
+                        <img src="location.png" alt="Location" />
+                        <p>Guiuan, Eastern Samar</p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/Cris.angelo.labicane29"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/in/cris-labicane-1764a128b/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/wizycris/"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript for Toggle Button -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.0/typed.min.js"></script>
+    <script>
+        const toggleBtn = document.querySelector('.togglebtn');
+        const navLinks = document.querySelector('.navlinks');
+
+        toggleBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+            toggleBtn.classList.toggle('click');
+        });
+        function showPopup() {
+        document.getElementById("popup").style.display = "flex"; // Show the popup
+}
+
+        function closePopup() {
+        document.getElementById("popup").style.display = "none"; // Hide the popup
+}
+
+    </script>
+</body>
+</html>
