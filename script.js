@@ -9,7 +9,7 @@ togglebtn.addEventListener("click", function() {
 
 // Typed.js animation for text
 var typed = new Typed(".input", {
-    strings: ["Frontend Developer", "Web Developer"],
+    strings: ["Web Developer", "Aspiring Real Estate Virtual Assistant with a Technical Background"],
     typeSpeed: 70,
     backSpeed: 55,
     loop: true
