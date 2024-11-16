@@ -16,10 +16,8 @@
                 <p>Aspiring Real Estate Virtual Assistant</p>
               
                 <div class="button-group">
-                    <center>
                     <button class="download-button" onclick="downloadResume()">Download CV</button>
                     <button class="back-button" onclick="goBack()">Back</button>
-                    </center>
                 </div>
           
             </div>
@@ -58,7 +56,7 @@
         // Download Resume Function
         function downloadResume() {
             const link = document.createElement('a');
-            link.href = 'Resume.pdf'; // Ensure Resume.pdf is in the same directory
+            link.href = 'RESUMEpic.pdf'; // Ensure Resume.pdf is in the same directory
             link.download = 'Cris_Labicane_Resume.pdf';
             link.click();
         }
